@@ -64,7 +64,7 @@ function endGame(guess){
   userInput.value = ''
   userInput.setAttribute('disabled', '')
   p.classList.add('button')
-  p.innerHTML = `<h2 id = 'newGame'>Start new game</h2>`
+  p.innerHTML = `<h2 id = 'newGame' style="cursor:pointer">Start new game</h2>`
   resultParas.appendChild(p)
   playGame = false
   startGame()
