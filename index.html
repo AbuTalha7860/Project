@@ -5,13 +5,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <style>
-        a{
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --bgOrange: #e84949;
+        }
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+        .heading{
+            text-align: center;
+        }
+        .heading a {
+            margin: 30px ;
+            color: #fff;
+            text-decoration: none;
             cursor: pointer;
         }
+        .heading a:hover {
+            color: aquamarine;
+        }
+        .page-container{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 0;
+        
+            display: flex;
+            flex-direction: column;
+            gap: 120px;
+        }
+        .project-card{
+            cursor: pointer;
+            width: 90%;
+            height: 550px;
+            background-image: url(./guess-the-number.png);
+            background-size: cover;
+            position: relative;
+            box-shadow: 0px 0px 40px #1f1f1f;
+        }
+        .project-card::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: #1f1f1f9a;
+            z-index: 0;
+        }
+        .project-card::before{
+            content: "";
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(45deg,#343d68,#343d68be,#343d687c);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all 0.4s;
+            z-index: 1;
+        }
+        .project-card:hover::before{
+            transform: scaleX(1);
+        }
+        .project-number{
+            position: absolute;
+            font-size: 100px;
+            font-weight: 600;
+            color: white;
+            z-index: 10;
+            display: none;
+        }
+        .project-card:hover .project-number{
+            display: block;
+        }
+        .project-number-right{
+            right: -40px;
+            top: -45px;
+        }
+        .project-number-left{
+            left: -40px;
+            top: -45px;
+        }
+        .project-content{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            padding: 2em;
+            bottom: 15%;
+            z-index: 5;
+            gap: 2em;
+            transition: all 0.4s;
+        }
+        .project-content-left{
+            left: 10%;
+        }
+        .project-content-right{
+            right: 10%;
+        }
+        .project-skill-container{
+            width: 60%;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .project-skill{
+            width: 40px;
+        }
+        .project-heading{
+            font-size: 50px;
+            font-weight: 500;
+            line-height: 3rem;
+        }
+        .project-subHeading{
+            width: 70%;
+            font-size: 16px;
+            font-style: italic;
+        }
+        .project-card:hover .project-content{
+            transform: scale(1.1);
+        }
+        #project2{
+            background-image: url(./guess-the-number.png);
+        }      
+        #project1{
+            background-image: url(./canva-brown-aesthetic-paper-texture-portfolio-cover-document-QEogL5pWyVA.jpg);
+            background-size: contain;
+        }      
     </style>
 </head>
-<body>
-    <a href="./4. GuessTheNumber/index.html">Number Guessing Game</a>
-    <a href="./Demo Portfolio/index.html">Demo Porfolio</a>
+<body class="bg-black">
+    <header class="heading">
+        <h1><a href="https://github.com/AbuTalha7860/Project" target="_blank">My Projects</a></h1>
+    </header>
+    <div class="project-section" id="projects">
+        <div class="page-container">
+            <div class="project-card" id="project1">
+                <div class="project-number project-number-right">01</div>
+                <div class="project-content project-content-left">
+                    <div class="project-skill-container">
+                        <img class="project-skill" src="./HTML.png" alt="">
+                        <img class="project-skill" src="./CSS.png" alt="">
+                    </div>
+                    <h2 class="project-heading">Demo Portfolio</h2>
+                    <div class="project-subHeading">
+                        Hi! Abu Talha , It's my parctice work in frontend
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" id="project2">
+                <div class="project-number project-number-left">02</div>
+                <div class="project-content project-content-right">
+                    <div class="project-skill-container">
+                        <img class="project-skill" src="./HTML.png" alt="">
+                        <img class="project-skill" src="./CSS.png" alt="">
+                        <img class="project-skill" src="./Javascript.svg" alt="">
+                    </div>
+                    <h2 class="project-heading">Number Guessing Game</h2>
+                    <div class="project-subHeading">
+                        A project to play game in free time
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
 </body>
+<script>
+    document.getElementById('project1').addEventListener('click', () => {
+        let link = "https://abutalha7860.github.io/Project/Demo%20Portfolio/index.html"
+        window.open(link, '_blank');
+    })
+    document.getElementById('project2').addEventListener('click', () => {
+        let link = "https://abutalha7860.github.io/Project/4.%20GuessTheNumber/index.html"
+        window.open(link, '_blank');
+    })
+</script>
 </html>
