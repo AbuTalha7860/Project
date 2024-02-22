@@ -158,7 +158,7 @@ a{
     animation: scaleImage 5s linear infinite;
 }
 .user-image img{
-    width: 345px;
+    width: 250px;
 /*     aspect-ratio: auto 345 / 390; */
 /*     height: 390px; */
     z-index: -9;
