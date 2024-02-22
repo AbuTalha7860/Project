@@ -159,8 +159,8 @@ a{
 }
 .user-image img{
     width: 345px;
-    aspect-ratio: auto 345 / 390;
-    height: 390px;
+/*     aspect-ratio: auto 345 / 390; */
+/*     height: 390px; */
     z-index: -9;
 }
 @keyframes scaleImage {
