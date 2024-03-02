@@ -189,6 +189,7 @@ a {
 .btn-pink:hover {
   border: solid 3px var(--bgOrange);
   color: #000000;
+  /* border: none ; */
 }
 
 #btn-bottom {
@@ -956,5 +957,4 @@ footer {
   .footer-faded-text {
     display: none;
   }
-
 }
